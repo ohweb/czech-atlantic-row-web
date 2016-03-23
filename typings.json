@@ -1,0 +1,16 @@
+{
+  "name": "czech-atlantic-row-web",
+  "version": false,
+  "dependencies": {
+    "es6-promise": "registry:npm/es6-promise#3.0.0+20160211003958"
+  },
+  "ambientDependencies": {
+    "core-js": "registry:dt/core-js#0.0.0+20160317120654"
+  },
+  "devDependencies": {
+    "webpack": "registry:npm/webpack#1.12.9+20160219013405"
+  },
+  "ambientDevDependencies": {
+    "node": "registry:dt/node#4.0.0+20160317120654"
+  }
+}

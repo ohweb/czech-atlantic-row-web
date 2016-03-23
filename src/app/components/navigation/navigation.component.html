@@ -1,0 +1,63 @@
+<nav *ngIf="type==='normal'">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-2 col-lg-push-1">
+        <a [routerLink]="['/Home']"><img src="images/logo-czar-male.png"/></a>
+      </div>
+      <div class="col-lg-6">
+        <div class="row">
+          <button type="button" class="navbar-toggle collapsed"
+                  data-toggle="collapse" data-target="#navbar"
+                  aria-expanded="false"
+                  aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <span class="navbar-brand">Czech Atlantic Row</span>
+        </div>
+        <div class="row">
+          <ul class="nav navbar-nav">
+            <li><a [routerLink]="['/Page', {klic: 'o-ceste'}]">O cestě</a></li>
+            <li><a [routerLink]="['/Page', {klic: 'posadka'}]">Posádka</a></li>
+            <li><a [routerLink]="['/Page', {klic: 'veslice'}]">Veslice</a></li>
+            <li><a [routerLink]="['/Blog']">Blog</a></li>
+            <li><a [routerLink]="['/Page', {klic: 'partneri'}]">Partneři</a></li>
+            <li><a [routerLink]="['/Page', {klic: 'podporte-nas'}]">Podpořte nás</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-2">
+        <a [routerLink]="['/Home']"><img src="images/logo-czar-bg.jpg" style="width:100px;"/></a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+
+<!-- Navigace pro hlavní stránku webu. -->
+
+<nav *ngIf="type==='logo'" class="logo-navigace">
+  <div class="container">
+    <div id="logo-link-cesta" class="logo-link">
+      <a [routerLink]="['/Page',{ klic: 'o-ceste'}]">O cestě</a>
+    </div>
+    <div id="logo-link-posadka class="logo-link>
+      <a [routerLink]="['/Page',{klic: 'posadka'}]">Posádka</a>
+    </div>
+    <div id="logo-link-veslice" class="logo-link">
+      <a [routerLink]="['/Page', {klic: 'veslice'}]">Veslice</a>
+    </div>
+    <div id="logo-link-blog" class="logo-link">
+      <a [routerLink]="['/Blog']">Blog</a>
+    </div>
+    <div id="logo-link-partneri" class="logo-link">
+      <a [routerLink]="['/Page', {klic: 'partneri'}]">Partneři</a>
+    </div>
+    <div id="logo-link-podpora" class="logo-link">
+      <a [routerLink]="['/Page', {klic:'podporte-nas'}]">Podpořte nás</a>
+    </div>
+  </div>
+</nav>
