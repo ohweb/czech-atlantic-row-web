@@ -1,5 +1,11 @@
 <navigation-component></navigation-component>
 
-
-<h1>Login</h1>
-<p>Lorem ipsum....</p>
+<div class="login-component">
+  <h1>Přihlášení uživatele</h1>
+  <button *ngIf="!auth.authenticated" (click)="signIn()" type="button">
+    Přihlásit se pomocí Google
+  </button>
+  <button *ngIf="auth.authenticated" (click)="signOut()" type="button">
+    Odhlásit se
+  </button>
+</div>

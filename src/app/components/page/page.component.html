@@ -1,3 +1,15 @@
 <navigation-component></navigation-component>
-
-<h1>page - {{klic}}</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-8 col-md-offset-2" innerHtml="{{pageHtml}}"></div>
+  </div>
+  <div *ngIf="auth.authenticated" class="row">
+    <div class="">
+      <div class="page-header">
+        <h3>Editace stránky <small>{{pageKey}}</small></h3>
+      </div>
+      <textarea [(ngModel)]="pageMarkdown"></textarea>
+      <button (click)="onSaveClicked()">Uložit</button>
+    </div>
+  </div>
+</div>

@@ -5,12 +5,14 @@
     "es6-promise": "registry:npm/es6-promise#3.0.0+20160211003958"
   },
   "ambientDependencies": {
-    "core-js": "registry:dt/core-js#0.0.0+20160317120654"
+    "core-js": "registry:dt/core-js#0.0.0+20160317120654",
+    "firebase": "registry:dt/firebase#2.4.1+20160316155526",
+    "marked": "registry:dt/marked#0.0.0+20160325085301"
   },
   "devDependencies": {
     "webpack": "registry:npm/webpack#1.12.9+20160219013405"
   },
   "ambientDevDependencies": {
-    "node": "registry:dt/node#4.0.0+20160317120654"
+    "node": "registry:dt/node#4.0.0+20160330064709"
   }
 }

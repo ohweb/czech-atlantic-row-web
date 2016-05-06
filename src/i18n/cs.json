@@ -1,0 +1,11 @@
+{
+  "navigace": {
+    "o-ceste": {"key":"o-ceste", "name":"o cestě"},
+    "posadka": {"key":"posadka", "name":"posádka"},
+    "veslice": {"key":"veslice", "name":"veslice"},
+    "blog": {"key":"blog", "name":"blog"},
+    "partneri": {"key":"partneri", "name":"partneři"},
+    "podporte-nas": {"key":"podporte-nas", "name":"podpořte nás"}
+  },
+  "hello-world" : "Ahoj světe"
+}

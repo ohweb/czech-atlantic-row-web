@@ -1,0 +1,11 @@
+{
+  "navigace": {
+    "o-ceste": {"key":"our-journey", "name":"our journey"},
+    "posadka": {"key":"crew", "name":"crew"},
+    "veslice": {"key":"boat", "name":"boat"},
+    "blog": {"key":"blog", "name":"blog"},
+    "partneri": {"key":"our-partners", "name":"our partners"},
+    "podporte-nas": {"key":"support-us", "name":"support us"}
+  },
+  "hello-world" : "Hello World"
+}

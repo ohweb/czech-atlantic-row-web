@@ -1,0 +1,7 @@
+<div class="{{linkKey}}" [ngClass]="{isHover: hover}"
+     #element
+     (mouseover)="onMouseOver(element, linkStar, linkLabel)"
+     (mouseleave)="onMouseLeave(element, linkStar, linkLabel)">
+  <a #linkStar class="logo-link-star" [ngClass]="{hover: isHover}"></a>
+  <span #linkLabel class="logo-link-title" [ngClass]="{hover: isHover}">{{'navigace.' + linkKey + '.name'|translate}}</span>
+</div>

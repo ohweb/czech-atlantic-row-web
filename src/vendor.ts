@@ -13,4 +13,6 @@ import 'angular2/core';
 import 'angular2/http';
 import 'angular2/router';
 
+// Firebase
+import 'firebase';
 

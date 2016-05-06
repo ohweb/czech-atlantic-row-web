@@ -2,8 +2,9 @@ const webpack = require('webpack');
 const path = require('path');
 
 
-// require all the neede plugins
+// require all the needed plugins
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ForkCheckerPlugin = require('awesome-typescript-loader').ForkCheckerPlugin;
 
 
@@ -67,11 +68,28 @@ var webpackConfig = {
         exclude : [/\.(spec|e2e)\.ts$]/]
       },
 
+      // File loader for JPGs and PNGs
+      // TODO: S tímhle si ještě pohrajeme. Nastavíme načítání data-src atd.
+      //
+      // See: https://github.com/webpack/file-loader
+      {
+        test   : /\.(jpe?g|png|gif)$/,
+        loader : 'url-loader',
+        query  : { limit : '8192' }
+      },
+
       // SASS Loader for .scss files
       // See: https://github.com/jtangelder/sass-loader
       {
         test    : /\.scss$/,
-        loaders : ['raw-loader', 'sass-loader']
+        loaders : ['css', 'sass']
+      },
+
+      // CSS Loader for .css files
+      // See: https://github.com/webpack/style-loader
+      {
+        test    : /\.css$/,
+        loaders : ['style', 'css', 'sass']
       },
 
       // HTML loader support for *.html files
@@ -83,16 +101,8 @@ var webpackConfig = {
         test    : /\.html$/,
         loader  : 'html-loader',
         exclude : ['./src/index.html']
-      },
-
-      // File loader for JPGs and PNGs
-      // TODO: S tímhle si ještě pohrajeme. Nastavíme načítání data-src atd.
-      //
-      // See: https://github.com/webpack/file-loader
-      {
-        test: /\.(jpg|png)$/,
-        loader: 'file-loader'
       }
+
     ]
   },
 
@@ -123,7 +133,23 @@ var webpackConfig = {
     new HtmlWebpackPlugin({
       template      : path.join(__dirname, 'src', 'index.html'),
       chunkSortMode : 'none'
-    })
+    }),
+
+
+    // ## CopyWebpackPlugin
+    // Slouží k překopírování statických soborů, které nejsou přímo linkované
+    // ze zdrojáků aplikace.
+    // See: https://github.com/kevlened/copy-webpack-plugin
+    new CopyWebpackPlugin([
+      {
+        from : path.join(__dirname, 'src', 'assets'),
+        to   : path.join(__dirname, 'dist', 'assets')
+      },
+      {
+        from : path.join(__dirname, 'src', 'i18n'),
+        to   : path.join(__dirname, 'dist', 'i18n')
+      }
+    ])
 
   ],
 
@@ -136,7 +162,8 @@ var webpackConfig = {
     watchOptions       : {
       aggregateTimeout : 300,
       poll             : 1000
-    }
+    },
+    outputPath         : path.join(__dirname, 'dist')
   },
 
 

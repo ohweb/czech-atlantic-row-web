@@ -1,0 +1,164 @@
+$zluta: #ffe22b;
+
+.logo-link-star {
+  display: none;
+}
+.logo-link-title {
+  font-style: italic;
+  font-size: 2.25em;
+  &.hover, &:hover {
+    color: $zluta;
+  }
+}
+
+@media (min-width: 768px) {
+  .logo-link-title,
+  .logo-link-star {
+    position: relative;
+    float: left;
+    &.hover, &:hover {
+      color: $zluta;
+    }
+  }
+  .logo-link-title {
+    font-style: italic;
+    font-size: 2.25em;
+  }
+}
+@media (min-width: 992px) {}
+@media (min-width: 1200px) {}
+
+
+.posadka {
+  @media (min-width: 768px) {
+    .logo-link-star {
+      width: 126px;
+      height: 123px;
+      top: 203px;
+      left: 0;
+      &.hover, &:hover {
+        background-image: url('./images/logo-navigace-posadka-hover.png');
+      }
+    }
+    .logo-link-title {
+      top: 203px;
+      left: -246px;
+    }
+  }
+  @media (min-width: 992px) {
+  }
+  @media (min-width: 1200px) {
+  }
+}
+
+.partneri {
+  @media (min-width: 768px) {
+    .logo-link-star {
+      width: 108px;
+      height: 105px;
+      top: 0;
+      left: -98px;
+      &.hover, &:hover {
+        background-image: url('./images/logo-navigace-partneri-hover.png');
+      }
+    }
+    .logo-link-title {
+      top: -20px;
+      left: -100px;
+    }
+  }
+  @media (min-width: 992px) {
+  }
+  @media (min-width: 1200px) {
+  }
+}
+
+.veslice {
+  @media (min-width: 768px) {
+    .logo-link-star {
+      width: 77px;
+      height: 44px;
+      top: 226px;
+      left: -191px;
+      &.hover, &:hover {
+        background-image: url('./images/logo-navigace-veslice-hover.png');
+      }
+    }
+    .logo-link-title {
+      top: 125px;
+      left: -213px;
+    }
+  }
+  @media (min-width: 992px) {
+  }
+  @media (min-width: 1200px) {
+  }
+}
+
+.blog {
+  @media (min-width: 768px) {
+    .logo-link-star {
+      width: 61px;
+      height: 61px;
+      top: 342px;
+      left: 223px;
+      &.hover, &:hover {
+        background-image: url('./images/logo-navigace-blog-hover.png');
+      }
+    }
+    .logo-link-title {
+      top: 385px;
+      left: 223px;
+    }
+  }
+  @media (min-width: 992px) {
+  }
+  @media (min-width: 1200px) {
+  }
+}
+
+.podporte-nas {
+  @media (min-width: 768px) {
+    .logo-link-star {
+      width: 116px;
+      height: 140px;
+      top: -6px;
+      left: 173px;
+      &.hover,
+      &:hover {
+        background-image: url('./images/logo-navigace-podpora-hover.png');
+      }
+    }
+    .logo-link-title {
+      top: 35px;
+      left: 220px;
+    }
+  }
+  @media (min-width: 992px) {
+  }
+  @media (min-width: 1200px) {
+  }
+}
+
+.o-ceste {
+  @media (min-width: 768px) {
+    .logo-link-star {
+      width: 48px;
+      height: 48px;
+      top: 75px;
+      left: 32px;
+      &.hover,
+      &:hover {
+        background-image: url('./images/logo-navigace-cesta-hover.png');
+      }
+    }
+    .logo-link-title {
+      top: 95px;
+      left: 160px;
+    }
+  }
+  @media (min-width: 992px) {
+  }
+  @media (min-width: 1200px) {
+  }
+}
